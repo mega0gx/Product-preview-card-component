@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+    flex-grow: 1;
+}
+
+.box {
+    width: 50%
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+}
+
+.right {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    flex-grow: 1;
+}
+
+.right .header {
+    font-family: "Fraunces", serif;
+    color: hsl(228, 12%, 48%);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+}
+
+.right .title {
+    font-size: 3rem;
+    font-family: "Fraunces", serif;
+}
+
+.right .desc {
+    color: hsl(228, 12%, 48%);
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+}
+
+.right .price {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.price .after {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 3em;
+    color: hsl(158, 36%, 37%);
+}
+
+.price .before {
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+
+.btn {
+    font-family: "Fraunces", serif;
+    font-size: 1.3rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: hsl(158, 36%, 37%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+    }
+    .box {
+        width: 100%;
+    }
+    .left img {
+        content: url(./image-product-mobile.jpg);
+        height: 100%;
+        height: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+    .right {
+        gap: 1rem;
+    }
+    .right .title {
+        font-size: 3rem;
+    }
+    .right .desc {
+        font-size: 1.1rem;
+    }
+}
